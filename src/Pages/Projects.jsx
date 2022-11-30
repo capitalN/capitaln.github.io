@@ -32,11 +32,12 @@ export default function Projects() {
             {SKILLS.map((skill) => (
               <Stack
                 key={skill.title}
-                h="320px"
+                h="300px"
                 w="300px"
-                bg={"white"}
-                justifyContent="space-evenly"
-                borderRadius={"50px"}
+                bg={"gray.700"}
+                color="white"
+                justifyContent="center"
+                borderRadius={"20px"}
               >
                 <Heading size={"md"}>{skill.title}</Heading>
 
@@ -60,7 +61,7 @@ export default function Projects() {
                     href="https://course.masaischool.com/messages/39864"
                     target="_blank"
                   >
-                    <SiGithub color="purple" size={"30px"} />
+                    <SiGithub color="white" size={"30px"} />
                   </a>
                 </Flex>
               </Stack>

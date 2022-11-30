@@ -1,4 +1,13 @@
-import { Box, Flex, Heading, Link, textDecoration } from "@chakra-ui/react";
+import {
+  Box,
+  Divider,
+  Flex,
+  Heading,
+  HStack,
+  Link,
+  textDecoration,
+  VStack,
+} from "@chakra-ui/react";
 
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
@@ -77,6 +86,17 @@ function App() {
         <Box id="contact">
           <Contact />
         </Box>
+      </Box>
+
+      <Box
+        w="100vw"
+        justify="space-evenly"
+        bg={"gray.700"}
+        color="white"
+        padding={"20px"}
+      >
+        <Heading>nikhil angolkar</Heading>
+        <Link>angolkarnikhil@gmail.com</Link>
       </Box>
     </Box>
   );

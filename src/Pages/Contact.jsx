@@ -30,7 +30,6 @@ export default function Contact() {
           h="100vh"
           align="center"
           justify="center"
-          gap="20px"
           border={"1px solid"}
           p="20px"
         >
@@ -41,6 +40,7 @@ export default function Contact() {
             align="top"
             bg={"gray.700"}
             borderRadius={"10px"}
+            boxShadow={"2xl"}
           >
             <VStack justify={"space-between"}>
               <VStack textAlign={"left"} align={"left"} color="gray.100">
