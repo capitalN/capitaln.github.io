@@ -35,7 +35,7 @@ function App() {
   };
 
   return (
-    <Box bg={"gray.100"} color="blue.600" textAlign={"center"} className="App">
+    <Box color={"gray.700"} bg="white" textAlign={"center"} className="App">
       <Flex
         as={"header"}
         justify={"space-evenly"}

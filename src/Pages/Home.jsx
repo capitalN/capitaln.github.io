@@ -1,5 +1,13 @@
 import React from "react";
-import { Box, Heading, Container, Button, Flex, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Container,
+  Button,
+  Flex,
+  Text,
+  Image,
+} from "@chakra-ui/react";
 
 export default function Home() {
   return (
@@ -14,6 +22,7 @@ export default function Home() {
           maxW={"3xl"}
           margin="auto"
         >
+          <Image src="code.svg" w={"50%"} />
           <Heading size={"4xl"}>nikhil angolkar</Heading>
           <Heading>full stack web developer</Heading>
           <Text textAlign={"center"}>
@@ -22,7 +31,7 @@ export default function Home() {
             quaerat nostrum, numquam quam asperiores eaque deserunt. Illo
             tempora in cum? Obcaecati.
           </Text>
-          <Button colorScheme="orange" borderRadius="full">
+          <Button bg="orange" color={"white"} borderRadius="full">
             RESUME
           </Button>
         </Flex>
