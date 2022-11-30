@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Link, textDecoration } from "@chakra-ui/react";
+import { Box, Flex, Heading, Link, textDecoration } from "@chakra-ui/react";
 
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
@@ -26,10 +26,10 @@ function App() {
 
   window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      document.getElementById("navbar").style.top = "0";
-    } else {
+    if (currentScrollPos == 0) {
       document.getElementById("navbar").style.top = "-52px";
+    } else if (0 < currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
     }
     prevScrollpos = currentScrollPos;
   };
