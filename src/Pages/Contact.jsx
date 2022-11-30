@@ -19,7 +19,11 @@ import {
 
 export default function Contact() {
   return (
-    <Box>
+    <Box
+      backgroundImage={"people.svg"}
+      backgroundRepeat="no-repeat"
+      backgroundSize="cover"
+    >
       <Container maxW={"7xl"}>
         <Flex
           direction={"column"}
@@ -30,7 +34,7 @@ export default function Contact() {
           border={"1px solid"}
           p="20px"
         >
-          <HStack
+          <Flex
             border={"2px solid"}
             p="30px"
             gap={"20px"}
@@ -83,7 +87,7 @@ export default function Contact() {
                 Send Message
               </Button>
             </VStack>
-          </HStack>
+          </Flex>
         </Flex>
       </Container>
     </Box>

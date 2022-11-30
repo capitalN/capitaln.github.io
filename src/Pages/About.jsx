@@ -1,5 +1,22 @@
 import React from "react";
-import { Box, Heading, Container, Button, Flex } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Container,
+  Button,
+  Flex,
+  HStack,
+  VStack,
+  Textarea,
+  Text,
+  Input,
+  Image,
+  Stack,
+  Divider,
+  color,
+} from "@chakra-ui/react";
+
+import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 
 export default function About() {
   return (
@@ -9,12 +26,72 @@ export default function About() {
           direction={"column"}
           h="100vh"
           align="center"
-          gap="20px"
           border={"1px solid"}
-          p="20px"
           justify={"center"}
+          color="white"
         >
-          <Heading>about</Heading>
+          <Flex
+            m={"10%"}
+            p="30px"
+            gap={"40px"}
+            align="top"
+            bg={"gray.700"}
+            borderRadius={"10px"}
+            // direction="column"
+          >
+            <VStack
+              p={"20px"}
+              boxShadow={"2xl"}
+              borderRadius={"10px"}
+              justify={"space-evenly"}
+            >
+              <Image
+                src="https://avatars.githubusercontent.com/u/107465553?v=4"
+                alt="nikhil angolkar"
+                borderRadius={"full"}
+                width="70%"
+                mb="20px"
+                boxShadow={"2xl"}
+              />
+              <Divider />
+              <Box fontFamily={"mono"}>
+                <Text fontWeight={"bold"} fontSize="2xl">
+                  NIKHIL ANGOLKAR
+                </Text>
+                <Text fontWeight={"bold"}>full-stack web-developer</Text>
+                {/* <Text>code | dsa | more</Text> */}
+              </Box>
+            </VStack>
+            <VStack
+              maxW={"600px"}
+              color={"white"}
+              justifyContent={"center"}
+              gap="15px"
+            >
+              <Heading>about me</Heading>
+
+              <Text fontWeight={"bold"} fontSize="md">
+                " Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Reiciendis soluta est quas tempore beatae corrupti vel tenetur
+                deserunt laudantium, reprehenderit odit repudiandae rem quos
+                natus laboriosam optio voluptatum commodi labore "
+              </Text>
+              <Button
+                borderRadius={"full"}
+                bg={"orange"}
+                color="white"
+                _hover={{ bg: "white", color: "gray.700" }}
+                fontWeight="bold"
+              >
+                RESUME
+              </Button>
+              <HStack color={"gray.700"}>
+                <Button borderRadius={"full"}>G</Button>
+                <Button borderRadius={"full"}>G</Button>
+                <Button borderRadius={"full"}>G</Button>
+              </HStack>
+            </VStack>
+          </Flex>
         </Flex>
       </Container>
     </Box>

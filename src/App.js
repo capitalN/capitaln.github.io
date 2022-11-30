@@ -43,13 +43,19 @@ function App() {
         w="100vw"
         h={"50px"}
         align={"center"}
-        bg="white"
+        bg={"gray.700"}
+        color="white"
         zIndex={10}
         id="navbar"
         transition={"top 0.3s"}
       >
         {LINKS.map((link) => (
-          <Link fontWeight={"bold"} href={link.to} key={link.to}>
+          <Link
+            _hover={{ color: "orange" }}
+            fontWeight={"bold"}
+            href={link.to}
+            key={link.to}
+          >
             {link.title}
           </Link>
         ))}
