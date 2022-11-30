@@ -9,6 +9,7 @@ export default function Contact() {
           direction={"column"}
           h="100vh"
           align="center"
+          justify="center"
           gap="20px"
           border={"1px solid"}
           p="20px"

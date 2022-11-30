@@ -1,12 +1,12 @@
-import { Box, Flex, Link, textDecoration } from "@chakra-ui/react";
+import { Box, Container, Flex, Link, textDecoration } from "@chakra-ui/react";
 
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Home from "./Pages/Home";
 import Projects from "./Pages/Projects";
 import Skills from "./Pages/Skills";
-
 import "./App.css";
+import { useEffect, useState } from "react";
 
 const LINKS = [
   { to: "#home", title: "home" },
@@ -17,9 +17,21 @@ const LINKS = [
 ];
 
 function App() {
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
+    } else {
+      document.getElementById("navbar").style.top = "-70px";
+    }
+    prevScrollpos = currentScrollPos;
+  };
+
   return (
     <Box bg={"gray.100"} color="blue.600" textAlign={"center"} className="App">
       <Flex
+        as={"header"}
         justify={"space-evenly"}
         position="fixed"
         w="100vw"
@@ -27,6 +39,8 @@ function App() {
         align={"center"}
         bg="white"
         zIndex={10}
+        id="navbar"
+        transition={"top 0.3s"}
       >
         {LINKS.map((link) => (
           <Link fontWeight={"bold"} href={link.to} key={link.to}>
