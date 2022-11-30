@@ -6,7 +6,8 @@ import Home from "./Pages/Home";
 import Projects from "./Pages/Projects";
 import Skills from "./Pages/Skills";
 import "./App.css";
-import { useEffect, useState } from "react";
+import { Show, Hide } from "@chakra-ui/react";
+import { useEffect } from "react";
 
 const LINKS = [
   { to: "#home", title: "home" },
@@ -18,12 +19,17 @@ const LINKS = [
 
 function App() {
   var prevScrollpos = window.pageYOffset;
+
+  useEffect(() => {
+    document.getElementById("navbar").style.top = "-52px";
+  }, []);
+
   window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
       document.getElementById("navbar").style.top = "0";
     } else {
-      document.getElementById("navbar").style.top = "-70px";
+      document.getElementById("navbar").style.top = "-52px";
     }
     prevScrollpos = currentScrollPos;
   };
@@ -35,7 +41,7 @@ function App() {
         justify={"space-evenly"}
         position="fixed"
         w="100vw"
-        h={16}
+        h={"50px"}
         align={"center"}
         bg="white"
         zIndex={10}
@@ -48,6 +54,7 @@ function App() {
           </Link>
         ))}
       </Flex>
+
       <Box>
         <Box id="home">
           <Home />
