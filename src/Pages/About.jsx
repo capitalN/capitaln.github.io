@@ -14,6 +14,7 @@ import {
   Stack,
   Divider,
   color,
+  Link,
 } from "@chakra-ui/react";
 
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
@@ -76,15 +77,23 @@ export default function About() {
                 deserunt laudantium, reprehenderit odit repudiandae rem quos
                 natus laboriosam optio voluptatum commodi labore "
               </Text>
-              <Button
-                borderRadius={"full"}
-                bg={"orange"}
-                color="white"
-                _hover={{ bg: "white", color: "gray.700" }}
-                fontWeight="bold"
+              <Link
+                href="https://drive.google.com/file/d/1GtZiQIVtAi8ap6WSe38hKNHeB_c4T4eg/view?usp=share_link"
+                target="_blank"
+                _hover={{
+                  textDecoration: "none",
+                }}
               >
-                RESUME
-              </Button>
+                <Button
+                  borderRadius={"full"}
+                  bg={"orange"}
+                  color="white"
+                  _hover={{ bg: "white", color: "gray.700" }}
+                  fontWeight="bold"
+                >
+                  RESUME
+                </Button>
+              </Link>
               <HStack color={"gray.700"}>
                 <Button borderRadius={"full"}>G</Button>
                 <Button borderRadius={"full"}>G</Button>

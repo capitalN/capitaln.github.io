@@ -7,6 +7,7 @@ import {
   Flex,
   Text,
   Image,
+  Link,
 } from "@chakra-ui/react";
 
 export default function Home() {
@@ -31,9 +32,22 @@ export default function Home() {
             quaerat nostrum, numquam quam asperiores eaque deserunt. Illo
             tempora in cum? Obcaecati.
           </Text>
-          <Button bg="orange" color={"white"} borderRadius="full">
-            RESUME
-          </Button>
+          <Link
+            href="https://drive.google.com/file/d/1GtZiQIVtAi8ap6WSe38hKNHeB_c4T4eg/view?usp=share_link"
+            target="_blank"
+            _hover={{
+              textDecoration: "none",
+            }}
+          >
+            <Button
+              bg="orange"
+              color={"white"}
+              borderRadius="full"
+              _hover={{ bg: "gray.700" }}
+            >
+              RESUME
+            </Button>
+          </Link>
         </Flex>
       </Container>
     </Box>
