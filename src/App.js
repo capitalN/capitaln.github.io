@@ -4,10 +4,9 @@ import {
   Divider,
   Flex,
   Heading,
-  HStack,
   Link,
-  textDecoration,
-  VStack,
+  Stack,
+  useDisclosure,
 } from "@chakra-ui/react";
 
 import About from "./Pages/About";
@@ -16,8 +15,6 @@ import Home from "./Pages/Home";
 import Projects from "./Pages/Projects";
 import Skills from "./Pages/Skills";
 import "./App.css";
-import { Show, Hide } from "@chakra-ui/react";
-import { useEffect } from "react";
 
 const LINKS = [
   { to: "#home", title: "home" },
@@ -28,6 +25,8 @@ const LINKS = [
 ];
 
 function App() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  /*
   var prevScrollpos = window.pageYOffset;
 
   useEffect(() => {
@@ -43,6 +42,7 @@ function App() {
     }
     prevScrollpos = currentScrollPos;
   };
+  */
 
   return (
     <Box>
@@ -51,7 +51,7 @@ function App() {
         justify={"space-evenly"}
         position="fixed"
         w="100vw"
-        h={"50px"}
+        h={"60px"}
         align={"center"}
         bg={"gray.700"}
         color="white"
@@ -60,16 +60,18 @@ function App() {
         transition={"top 0.3s"}
       >
         <Heading fontFamily={"mono"}>NIKHIL</Heading>
-        {LINKS.map((link) => (
-          <Link
-            _hover={{ color: "orange" }}
-            fontWeight={"bold"}
-            href={link.to}
-            key={link.to}
-          >
-            {link.title}
-          </Link>
-        ))}
+        <Flex justify={"space-evenly"} w="50%">
+          {LINKS.map((link) => (
+            <Link
+              _hover={{ color: "orange" }}
+              fontWeight={"bold"}
+              href={link.to}
+              key={link.to}
+            >
+              {link.title}
+            </Link>
+          ))}
+        </Flex>
         <Link
           href="https://drive.google.com/file/d/1GtZiQIVtAi8ap6WSe38hKNHeB_c4T4eg/view?usp=share_link"
           target="_blank"
@@ -83,6 +85,7 @@ function App() {
             color="white"
             _hover={{ bg: "white", color: "gray.700" }}
             fontWeight="bold"
+            w="120px"
           >
             RESUME
           </Button>
@@ -92,23 +95,18 @@ function App() {
       <Box>
         <Box id="home">
           <Home />
-          <Divider />
         </Box>
         <Box id="about">
           <About />
-          <Divider />
         </Box>
         <Box id="skills">
           <Skills />
-          <Divider />
         </Box>
         <Box id="projects">
           <Projects />
-          <Divider />
         </Box>
         <Box id="contact">
           <Contact />
-          <Divider />
         </Box>
       </Box>
 
@@ -127,14 +125,3 @@ function App() {
 }
 
 export default App;
-
-/*
-<Navbar />
-<Routes>
-  <Route path="/" element={<Home />} />
-  <Route path="/about" element={<About />} />
-  <Route path="/skills" element={<Skills />} />
-  <Route path="/projects" element={<Projects />} />
-  <Route path="/contact" element={<Contact />} />
-</Routes>
-*/

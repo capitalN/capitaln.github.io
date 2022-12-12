@@ -39,6 +39,7 @@ export default function Home() {
               color={"white"}
               borderRadius="full"
               _hover={{ bg: "gray.700" }}
+              w="120px"
             >
               RESUME
             </Button>

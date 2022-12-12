@@ -21,7 +21,7 @@ import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 
 export default function About() {
   return (
-    <Box>
+    <Box bg={"gray.50"}>
       <Container maxW={"7xl"}>
         <Flex
           direction={"column"}
@@ -79,8 +79,9 @@ export default function About() {
                   borderRadius={"full"}
                   bg={"orange"}
                   color="white"
-                  _hover={{ bg: "white", color: "gray.700" }}
+                  _hover={{ bg: "gray.700" }}
                   fontWeight="bold"
+                  w="120px"
                 >
                   RESUME
                 </Button>

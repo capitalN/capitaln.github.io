@@ -11,6 +11,7 @@ import {
   background,
   Text,
   Divider,
+  VStack,
 } from "@chakra-ui/react";
 
 import GitHubCalendar from "react-github-calendar";
@@ -28,7 +29,7 @@ import {
 } from "react-icons/si";
 
 export default function Skills() {
-  let style = {
+  let skillsBadge = {
     displlay: "flex",
     background: "#2d3748",
     color: "white",
@@ -36,17 +37,17 @@ export default function Skills() {
     borderRadius: "10px",
     width: "120px",
     height: "120px",
-    textAlign: "center",
+    justifyContent: "center",
+    alignItems: "center",
+    fontWeight: "bold",
   };
 
   return (
-    <Box>
+    <Box pb={"30px"}>
       <Container maxW={"7xl"}>
         <Flex direction={"column"} align="center" gap="50px" justify={"center"}>
-          <Heading>skills</Heading>
-
+          <Heading mt={"8vh"}>skills</Heading>
           <Grid
-            style={{}}
             gridTemplateColumns={{
               base: "repeat(2,1fr)",
               md: "repeat(3,1fr)",
@@ -54,138 +55,62 @@ export default function Skills() {
             }}
             gap={"50px 80px"}
           >
-            <Box
-              align="center"
-              background={"gray.700"}
-              p="10px"
-              borderRadius={"10px"}
-              w="120px"
-              h="120px"
-              color={"white"}
-              justify="center"
-            >
+            <Stack style={skillsBadge}>
               <SiHtml5 size={"60px"} color="red" />
-              <Text fontWeight={"bold"} mt="3">
-                HTML
-              </Text>
-            </Box>
+              <Text>HTML</Text>
+            </Stack>
 
-            <Stack
-              align="center"
-              background={"gray.700"}
-              p="10px"
-              borderRadius={"10px"}
-              w="120px"
-              h="120px"
-              color={"white"}
-              justify="center"
-            >
+            <Stack style={skillsBadge}>
               <SiCss3 size={"60px"} color="blue" />
-              <Text fontWeight={"bold"} mt="3">
-                CSS
-              </Text>
+              <Text>CSS</Text>
             </Stack>
 
-            <Stack
-              align="center"
-              background={"gray.700"}
-              p="10px"
-              borderRadius={"10px"}
-              w="120px"
-              h="120px"
-              color={"white"}
-              justify="center"
-            >
+            <Stack style={skillsBadge}>
               <SiJavascript size={"60px"} color="orange" />
-              <Text fontWeight={"bold"} mt="3">
-                JavaScript
-              </Text>
+              <Text>JavaScript</Text>
             </Stack>
 
-            <Stack
-              align="center"
-              background={"gray.700"}
-              p="10px"
-              borderRadius={"10px"}
-              w="120px"
-              h="120px"
-              color={"white"}
-              justify="center"
-            >
+            <Stack style={skillsBadge}>
               <SiReact size={"60px"} color="#61dafd" />
               <Text fontWeight={"bold"} mt="3">
                 React
               </Text>
             </Stack>
 
-            <Stack
-              align="center"
-              background={"gray.700"}
-              p="10px"
-              borderRadius={"10px"}
-              w="120px"
-              h="120px"
-              color={"white"}
-              justify="center"
-            >
+            <Stack style={skillsBadge}>
               <SiChakraui size={"60px"} color="#81e6d9" />
-              <Text fontWeight={"bold"} mt="3">
-                ChakraUI
-              </Text>
+              <Text>ChakraUI</Text>
             </Stack>
 
-            <Stack
-              align="center"
-              background={"gray.700"}
-              p="10px"
-              borderRadius={"10px"}
-              w="120px"
-              h="120px"
-              color={"white"}
-              justify="center"
-            >
+            <Stack style={skillsBadge}>
               <SiGithub size={"60px"} color="white" />
-              <Text fontWeight={"bold"} mt="3">
-                GitHub
-              </Text>
+              <Text>GitHub</Text>
             </Stack>
 
-            <Stack
-              align="center"
-              background={"gray.700"}
-              p="10px"
-              borderRadius={"10px"}
-              w="120px"
-              h="120px"
-              color={"white"}
-              justify="center"
-            >
+            <Stack style={skillsBadge}>
               <SiReactrouter size={"60px"} color="red" />
-              <Text fontWeight={"bold"} mt="3">
-                ReactRouter
-              </Text>
+              <Text>ReactRouter</Text>
             </Stack>
 
-            <Stack
-              align="center"
-              background={"gray.700"}
-              p="10px"
-              borderRadius={"10px"}
-              w="120px"
-              h="120px"
-              color={"white"}
-              justify="center"
-            >
+            <Stack style={skillsBadge}>
               <SiRedux size={"60px"} color="#764abc" />
-              <Text fontWeight={"bold"} mt="3">
-                Redux
-              </Text>
+              <Text>Redux</Text>
             </Stack>
           </Grid>
-
-          {/* <Divider /> */}
-          <Heading>github calender</Heading>
-          <GitHubCalendar username="capitalN" />
+          {/* <Heading>github calender</Heading> */}
+          <VStack
+            style={{
+              border: "1px solid",
+              padding: "20px",
+              borderRadius: "10px",
+            }}
+          >
+            <GitHubCalendar username="capitalN" />
+            <Divider />
+            <Text fontWeight={"bold"} mt="-40px">
+              github calender / capitalN
+            </Text>
+          </VStack>
         </Flex>
       </Container>
     </Box>

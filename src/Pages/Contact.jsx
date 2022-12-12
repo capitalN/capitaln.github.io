@@ -5,17 +5,15 @@ import {
   Container,
   Button,
   Flex,
-  Stack,
-  Image,
   Text,
   Link,
   Input,
-  FormControl,
-  FormLabel,
   HStack,
   VStack,
   Textarea,
 } from "@chakra-ui/react";
+
+import { SiGithub, SiLinkedin, SiGmail, SiMinutemailer } from "react-icons/si";
 
 export default function Contact() {
   return (
@@ -49,7 +47,7 @@ export default function Contact() {
             }}
           >
             <VStack justify={"space-between"}>
-              <VStack color="gray.100" align="left">
+              <VStack color="gray.100">
                 <Heading>contact</Heading>
                 <Box>
                   <Text>phone</Text>
@@ -70,12 +68,15 @@ export default function Contact() {
                 </Box>
               </VStack>
 
-              <HStack>
+              <HStack gap={"10px"}>
                 <Link href="https://github.com/capitalN">
-                  <Button borderRadius={"full"}>Github</Button>
+                  <SiGithub color="white" size="30px" />
                 </Link>
                 <Link href="https://www.linkedin.com/in/nikhil-angolkar-62722a19b/">
-                  <Button borderRadius={"full"}>LinkedIn</Button>
+                  <SiLinkedin color="white" size="30px" />
+                </Link>
+                <Link href="mailto:angolkarnikhil@gmail.com">
+                  <SiGmail color="white" size="30px" />
                 </Link>
               </HStack>
             </VStack>
@@ -89,16 +90,22 @@ export default function Contact() {
               <Text fontWeight={"bold"} m="10px 20px">
                 fill up the form to contact
               </Text>
-              <Input type={"text"} placeholder="your name" />
-              <Input type={"email"} placeholder="mail@email.com" />
-              <Textarea placeholder="type here..." />
+              <Input type={"text"} placeholder="your name" textAlign={"left"} />
+              <Input
+                type={"email"}
+                placeholder="your email"
+                textAlign={"left"}
+              />
+              <Textarea placeholder="type here..." textAlign={"left"} />
               <Button
                 borderRadius={"full"}
                 bg={"orange"}
                 color="white"
                 _hover={{ bg: "gray.700" }}
+                fontWeight="bold"
+                w="120px"
               >
-                Send Message
+                SEND
               </Button>
             </VStack>
           </Flex>
