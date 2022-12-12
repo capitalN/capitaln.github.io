@@ -22,38 +22,35 @@ import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 export default function About() {
   return (
     <Box>
-      
       <Container maxW={"7xl"}>
         <Flex
           direction={"column"}
           h="100vh"
           align="center"
-          border={"1px solid"}
           justify={"center"}
-          color="white"
+          textAlign="center"
         >
           <Flex
-            m={"10%"}
+            m={"10px"}
             p="30px"
-            gap={"40px"}
+            gap={"20px"}
             align="top"
-            bg={"gray.700"}
             borderRadius={"10px"}
-            // direction="column"
+            direction={{ base: "column", md: "column", lg: "row" }}
+            boxShadow={"2xl"}
           >
             <VStack
-              p={"20px"}
-              boxShadow={"2xl"}
+              p={"30px"}
               borderRadius={"10px"}
               justify={"space-evenly"}
+              bg="gray.700"
+              color={"white"}
             >
               <Image
                 src="https://avatars.githubusercontent.com/u/107465553?v=4"
                 alt="nikhil angolkar"
-                borderRadius={"full"}
-                width="70%"
+                borderRadius={"10px"}
                 mb="20px"
-                boxShadow={"2xl"}
               />
               <Divider />
               <Box fontFamily={"mono"}>
@@ -61,22 +58,15 @@ export default function About() {
                   NIKHIL ANGOLKAR
                 </Text>
                 <Text fontWeight={"bold"}>full-stack web-developer</Text>
-                {/* <Text>code | dsa | more</Text> */}
               </Box>
             </VStack>
-            <VStack
-              maxW={"600px"}
-              color={"white"}
-              justifyContent={"center"}
-              gap="15px"
-            >
+            <VStack justifyContent={"center"} gap="15px">
               <Heading>about me</Heading>
 
-              <Text fontWeight={"bold"} fontSize="md">
-                " Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Reiciendis soluta est quas tempore beatae corrupti vel tenetur
-                deserunt laudantium, reprehenderit odit repudiandae rem quos
-                natus laboriosam optio voluptatum commodi labore "
+              <Text fontWeight={"bold"} fontSize="md" w={{ lg: "80%" }}>
+                " An ambitious and self-motivated full-stack web developer with
+                considerable technical skills who possesses self-discipline and
+                the ability to work with a minimum of supervision. "
               </Text>
               <Link
                 href="https://drive.google.com/file/d/1GtZiQIVtAi8ap6WSe38hKNHeB_c4T4eg/view?usp=share_link"
@@ -95,11 +85,6 @@ export default function About() {
                   RESUME
                 </Button>
               </Link>
-              <HStack color={"gray.700"}>
-                <Button borderRadius={"full"}>G</Button>
-                <Button borderRadius={"full"}>G</Button>
-                <Button borderRadius={"full"}>G</Button>
-              </HStack>
             </VStack>
           </Flex>
         </Flex>

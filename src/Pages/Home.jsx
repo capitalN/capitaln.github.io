@@ -26,12 +26,6 @@ export default function Home() {
           <Image src="code.svg" w={"50%"} />
           <Heading size={"4xl"}>nikhil angolkar</Heading>
           <Heading>full stack web developer</Heading>
-          <Text textAlign={"center"}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-            ducimus ut voluptate vero autem velit, voluptatum illum aliquid
-            quaerat nostrum, numquam quam asperiores eaque deserunt. Illo
-            tempora in cum? Obcaecati.
-          </Text>
           <Link
             href="https://drive.google.com/file/d/1GtZiQIVtAi8ap6WSe38hKNHeB_c4T4eg/view?usp=share_link"
             target="_blank"
@@ -40,6 +34,7 @@ export default function Home() {
             }}
           >
             <Button
+              fontWeight={"bold"}
               bg="orange"
               color={"white"}
               borderRadius="full"

@@ -27,10 +27,9 @@ export default function Contact() {
       <Container maxW={"7xl"}>
         <Flex
           direction={"column"}
-          h="100vh"
+          h={{ lg: "100vh" }}
           align="center"
           justify="center"
-          border={"1px solid"}
           p="20px"
         >
           <Flex
@@ -41,9 +40,16 @@ export default function Contact() {
             bg={"gray.700"}
             borderRadius={"10px"}
             boxShadow={"2xl"}
+            direction={{
+              base: "column",
+              sm: "column",
+              md: "row",
+              lg: "row",
+              xl: "row",
+            }}
           >
             <VStack justify={"space-between"}>
-              <VStack textAlign={"left"} align={"left"} color="gray.100">
+              <VStack color="gray.100" align="left">
                 <Heading>contact</Heading>
                 <Box>
                   <Text>phone</Text>
@@ -51,7 +57,12 @@ export default function Contact() {
                 </Box>
                 <Box>
                   <Text>email</Text>
-                  <Link fontWeight={"bold"}>angolkarnikhil@gmail.com</Link>
+                  <Link
+                    href="mailto:angolkarnikhil@gmail.com"
+                    fontWeight={"bold"}
+                  >
+                    angolkarnikhil@gmail.com
+                  </Link>
                 </Box>
                 <Box>
                   <Text>address</Text>
@@ -60,9 +71,12 @@ export default function Contact() {
               </VStack>
 
               <HStack>
-                <Button borderRadius={"full"}>G</Button>
-                <Button borderRadius={"full"}>G</Button>
-                <Button borderRadius={"full"}>G</Button>
+                <Link href="https://github.com/capitalN">
+                  <Button borderRadius={"full"}>Github</Button>
+                </Link>
+                <Link href="https://www.linkedin.com/in/nikhil-angolkar-62722a19b/">
+                  <Button borderRadius={"full"}>LinkedIn</Button>
+                </Link>
               </HStack>
             </VStack>
 

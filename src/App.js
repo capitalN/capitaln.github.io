@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Divider,
   Flex,
   Heading,
@@ -44,7 +45,7 @@ function App() {
   };
 
   return (
-    <Box color={"gray.700"} bg="white" textAlign={"center"} className="App">
+    <Box>
       <Flex
         as={"header"}
         justify={"space-evenly"}
@@ -58,6 +59,7 @@ function App() {
         id="navbar"
         transition={"top 0.3s"}
       >
+        <Heading fontFamily={"mono"}>NIKHIL</Heading>
         {LINKS.map((link) => (
           <Link
             _hover={{ color: "orange" }}
@@ -68,23 +70,45 @@ function App() {
             {link.title}
           </Link>
         ))}
+        <Link
+          href="https://drive.google.com/file/d/1GtZiQIVtAi8ap6WSe38hKNHeB_c4T4eg/view?usp=share_link"
+          target="_blank"
+          _hover={{
+            textDecoration: "none",
+          }}
+        >
+          <Button
+            borderRadius={"full"}
+            bg={"orange"}
+            color="white"
+            _hover={{ bg: "white", color: "gray.700" }}
+            fontWeight="bold"
+          >
+            RESUME
+          </Button>
+        </Link>
       </Flex>
 
       <Box>
         <Box id="home">
           <Home />
+          <Divider />
         </Box>
         <Box id="about">
           <About />
+          <Divider />
         </Box>
         <Box id="skills">
           <Skills />
+          <Divider />
         </Box>
         <Box id="projects">
           <Projects />
+          <Divider />
         </Box>
         <Box id="contact">
           <Contact />
+          <Divider />
         </Box>
       </Box>
 

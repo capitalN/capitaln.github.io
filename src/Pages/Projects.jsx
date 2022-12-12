@@ -9,62 +9,81 @@ import {
   Stack,
   Text,
   Link,
+  HStack,
+  VStack,
+  Divider,
 } from "@chakra-ui/react";
 
 import { SiGithub, SiNetlify } from "react-icons/si";
 
-const SKILLS = [{ title: "lately" }, { title: "freshly" }, { title: "tools" }];
+const PROJECTS = [
+  {
+    title: "lately",
+    link: "https://dulcet-marigold-6dca17.netlify.app/",
+    image: "lately.png",
+    github: "https://github.com/capitalN/lately.ai",
+    desc: "ai based content creating website made by me & my team",
+  },
+  {
+    title: "freshly",
+    link: "https://freshlyfw200091.netlify.app/index.html",
+    image: "freshly.png",
+    github: "https://github.com/capitalN/freshly",
+    desc: "Prepared meal order & delivery website",
+  },
+  {
+    title: "youtube",
+    link: "https://app.netlify.com/sites/tubular-pudding-02ae88/overview",
+    image: "lately.png",
+    image: "youtube.png",
+    desc: "video creating and sharing website",
+  },
+];
 
 export default function Projects() {
   return (
     <Box>
       <Container maxW={"7xl"}>
-        <Flex
-          direction={"column"}
-          h="100vh"
-          align="center"
-          gap="50px"
-          border={"1px solid"}
-          justify={"center"}
-        >
-          <Heading>projects</Heading>
-          <Flex gap={10}>
-            {SKILLS.map((skill) => (
-              <Stack
-                key={skill.title}
-                h="300px"
-                w="300px"
+        <Flex direction={"column"} align="center" justify={"center"}>
+          <Flex gap="30px" direction="column">
+            <Heading>projects</Heading>
+            {PROJECTS.map((project) => (
+              <Flex
+                key={project.title}
                 bg={"gray.700"}
                 color="white"
-                justifyContent="center"
-                borderRadius={"20px"}
+                direction={{ base: "column", lg: "row" }}
+                p="40px"
+                borderRadius={"40px"}
               >
-                <Heading size={"md"}>{skill.title}</Heading>
+                <Image
+                  w={{ base: "100%", lg: "60%" }}
+                  src={project.image}
+                  alt="fdf"
+                  borderRadius={"20px"}
+                  border="10px solid white"
+                />
 
-                <a
-                  href="https://dulcet-marigold-6dca17.netlify.app/"
-                  target="_blank"
+                <VStack
+                  w={{ base: "100%", lg: "40%" }}
+                  justify="center"
+                  p="20px"
                 >
-                  <Image
-                    _hover={{
-                      boxShadow: "2xl",
-                      transform: "scale(1.04)",
-                      transition: "0.5s",
-                    }}
-                    src="https://assets-global.website-files.com/5b5729421aca332c60585f78/61ba503872080311dde1ea56_long-form-landing-page-examples.png"
-                    alt="fdf"
-                  />
-                </a>
-                <Text>ai based content creating website</Text>
-                <Flex justifyContent={"space-evenly"}>
-                  <a
-                    href="https://course.masaischool.com/messages/39864"
-                    target="_blank"
-                  >
-                    <SiGithub color="white" size={"30px"} />
-                  </a>
-                </Flex>
-              </Stack>
+                  <Heading>{project.title}</Heading>
+                  <Text>{project.desc}</Text>
+                  <Text fontWeight={"bold"}>Tech Stack</Text>
+                  <Text>Html | css | JavaScript</Text>
+
+                  <HStack color={"gray.700"}>
+                    <Link href={project.link}>
+                      <Button borderRadius={"full"}>Live</Button>
+                    </Link>
+                    <Link href={project.github}>
+                      <Button borderRadius={"full"}>GitHub</Button>
+                    </Link>
+                  </HStack>
+                </VStack>
+              </Flex>
             ))}
           </Flex>
         </Flex>

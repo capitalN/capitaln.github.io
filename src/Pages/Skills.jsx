@@ -10,7 +10,10 @@ import {
   Grid,
   background,
   Text,
+  Divider,
 } from "@chakra-ui/react";
+
+import GitHubCalendar from "react-github-calendar";
 
 import {
   SiHtml5,
@@ -25,20 +28,33 @@ import {
 } from "react-icons/si";
 
 export default function Skills() {
+  let style = {
+    displlay: "flex",
+    background: "#2d3748",
+    color: "white",
+    padding: "10px",
+    borderRadius: "10px",
+    width: "120px",
+    height: "120px",
+    textAlign: "center",
+  };
+
   return (
     <Box>
       <Container maxW={"7xl"}>
-        <Flex
-          direction={"column"}
-          h="100vh"
-          align="center"
-          gap="50px"
-          border={"1px solid"}
-          justify={"center"}
-        >
-          <Heading mb={"20px"}>technical skills</Heading>
-          <Grid gridTemplateColumns={"repeat(4,1fr)"} gap={"50px 80px"}>
-            <Stack
+        <Flex direction={"column"} align="center" gap="50px" justify={"center"}>
+          <Heading>skills</Heading>
+
+          <Grid
+            style={{}}
+            gridTemplateColumns={{
+              base: "repeat(2,1fr)",
+              md: "repeat(3,1fr)",
+              lg: "repeat(4,1fr)",
+            }}
+            gap={"50px 80px"}
+          >
+            <Box
               align="center"
               background={"gray.700"}
               p="10px"
@@ -52,7 +68,7 @@ export default function Skills() {
               <Text fontWeight={"bold"} mt="3">
                 HTML
               </Text>
-            </Stack>
+            </Box>
 
             <Stack
               align="center"
@@ -166,6 +182,10 @@ export default function Skills() {
               </Text>
             </Stack>
           </Grid>
+
+          {/* <Divider /> */}
+          <Heading>github calender</Heading>
+          <GitHubCalendar username="capitalN" />
         </Flex>
       </Container>
     </Box>
