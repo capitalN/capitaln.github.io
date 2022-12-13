@@ -46,7 +46,7 @@ export default function Skills() {
     <Box pb={"30px"}>
       <Container maxW={"7xl"}>
         <Flex direction={"column"} align="center" gap="50px" justify={"center"}>
-          <Heading mt={"8vh"}>skills</Heading>
+          <Heading mt={"9vh"}>skills</Heading>
           <Grid
             gridTemplateColumns={{
               base: "repeat(2,1fr)",
@@ -100,10 +100,10 @@ export default function Skills() {
           {/* <Heading>github calender</Heading> */}
           <VStack
             style={{
-              border: "1px solid",
               padding: "20px",
               borderRadius: "10px",
             }}
+            boxShadow="2xl"
           >
             <GitHubCalendar username="capitalN" />
             <Divider />

@@ -21,7 +21,7 @@ import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 
 export default function About() {
   return (
-    <Box bg={"gray.50"}>
+    <Box>
       <Container maxW={"7xl"}>
         <Flex
           direction={"column"}

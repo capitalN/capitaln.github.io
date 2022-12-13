@@ -25,7 +25,9 @@ const PROJECTS = [
     link: "https://dulcet-marigold-6dca17.netlify.app/",
     image: "lately.png",
     github: "https://github.com/capitalN/lately.ai",
-    desc: "ai based content creating website",
+    desc: "this is an ai based content creating website buitd by me and my team of 4 during our construct week, and my contributions are ",
+    direction: "row",
+    contributions: ["navbar", "footer", "resource pages", "UI"],
     techStack: [
       { color: "red", title: "HTML" },
       { color: "blue", title: "CSS" },
@@ -37,7 +39,9 @@ const PROJECTS = [
     link: "https://freshlyfw200091.netlify.app/index.html",
     image: "freshly.png",
     github: "https://github.com/capitalN/freshly",
-    desc: "prepared meal order & delivery website",
+    desc: "prepared meal order & delivery website build by myself i have created navbar, login, signup form, UI",
+    direction: "row-reverse",
+    contributions: ["navbar", "footer", "resource pages", "UI"],
     techStack: [
       { color: "red", title: "HTML" },
       { color: "blue", title: "CSS" },
@@ -50,6 +54,8 @@ const PROJECTS = [
     image: "lately.png",
     image: "youtube.png",
     desc: "video creating and sharing website",
+    direction: "row",
+    contributions: ["navbar", "footer", "resource pages", "UI"],
     techStack: [
       { color: "red", title: "HTML" },
       { color: "blue", title: "CSS" },
@@ -59,40 +65,44 @@ const PROJECTS = [
 ];
 
 export default function Projects() {
-  // useEffect(() => {
-  //   GetStaticProps().then((res) => console.log(res));
-  // }, []);
-
   return (
     <Box pb="30px">
       <Container maxW={"7xl"}>
         <Flex direction={"column"} align="center" justify={"center"}>
-          <Flex gap="30px" direction="column">
-            <Heading mt={"8vh"}>projects</Heading>
+          <Flex gap="60px" direction="column">
+            <Heading mt={"9vh"}>projects</Heading>
             {PROJECTS.map((project) => (
               <Flex
                 key={project.title}
-                bg={"gray.700"}
-                color="white"
-                direction={{ base: "column", lg: "row" }}
-                p="20px"
+                direction={{ base: "column", lg: project.direction }}
+                gap="20px"
                 borderRadius={"40px"}
+  
               >
                 <Image
                   w={{ base: "100%", lg: "60%" }}
                   src={project.image}
                   alt="fdf"
                   borderRadius={"20px"}
+                  boxShadow="2xl"
                 />
 
                 <VStack
-                  w={{ base: "100%", lg: "40%" }}
+                  w={{ base: "100%", lg: "30%" }}
                   justify="space-around"
                   p="20px"
                 >
                   <Stack>
-                    <Heading>{project.title}</Heading>
+                    <Heading size={"md"}>{project.title}</Heading>
                     <Text>{project.desc}</Text>
+                  </Stack>
+                  <Stack>
+                    <Text fontWeight={"bold"}>contributions</Text>
+                    <HStack justify={"center"} flexWrap={"wrap"} gap="5px">
+                      {project.contributions.map((el) => (
+                        <Badge key={el}>{el}</Badge>
+                      ))}
+                    </HStack>
                   </Stack>
                   <Stack>
                     <Text fontWeight={"bold"}>tech-stack</Text>
@@ -104,7 +114,7 @@ export default function Projects() {
                       ))}
                     </HStack>
                   </Stack>
-
+                  <Divider />
                   <HStack color={"gray.700"}>
                     <Link
                       href={project.link}
@@ -125,7 +135,14 @@ export default function Projects() {
                         textDecoration: "none",
                       }}
                     >
-                      <Button borderRadius={"full"} fontWeight="bold" w="120px">
+                      <Button
+                        borderRadius={"full"}
+                        fontWeight="bold"
+                        w="120px"
+                        bg={"gray.700"}
+                        color="white"
+                        _hover={{ color: "gray.700", bg: "gray.200" }}
+                      >
                         GitHub.
                         <SiGithub />
                       </Button>
