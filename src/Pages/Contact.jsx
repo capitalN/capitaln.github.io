@@ -11,6 +11,7 @@ import {
   HStack,
   VStack,
   Textarea,
+  Divider,
 } from "@chakra-ui/react";
 
 import { SiGithub, SiLinkedin, SiGmail, SiMinutemailer } from "react-icons/si";
@@ -48,7 +49,7 @@ export default function Contact() {
           >
             <VStack justify={"space-between"}>
               <VStack color="gray.100">
-                <Heading>contact</Heading>
+                <Heading>CONTACT</Heading>
                 <Box>
                   <Text>phone</Text>
                   <Link fontWeight={"bold"}>+91 7795 334086</Link>
@@ -67,7 +68,7 @@ export default function Contact() {
                   <Text fontWeight={"bold"}>Belgaum, Karnataka</Text>
                 </Box>
               </VStack>
-
+              <Divider />
               <HStack gap={"10px"}>
                 <Link href="https://github.com/capitalN">
                   <SiGithub color="white" size="30px" />

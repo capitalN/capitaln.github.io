@@ -5,7 +5,6 @@ import {
   Container,
   Button,
   Flex,
-  Text,
   Image,
   Link,
 } from "@chakra-ui/react";
@@ -23,8 +22,10 @@ export default function Home() {
           maxW={"3xl"}
           margin="auto"
         >
-          <Image src="code.svg" w={"50%"} />
-          <Heading size={"4xl"}>nikhil angolkar</Heading>
+          <Image src="code.svg" w={{ base: "80%", sm: "50%" }} />
+          <Heading size={"4xl"} fontSize={"54px"}>
+            NIKHIL ANGOLKAR
+          </Heading>
           <Heading>full stack web developer</Heading>
           <Link
             href="https://drive.google.com/file/d/1GtZiQIVtAi8ap6WSe38hKNHeB_c4T4eg/view?usp=share_link"
@@ -34,11 +35,11 @@ export default function Home() {
             }}
           >
             <Button
-              fontWeight={"bold"}
-              bg="orange"
-              color={"white"}
-              borderRadius="full"
-              _hover={{ bg: "gray.700" }}
+              borderRadius={"full"}
+              bg={"orange"}
+              color="white"
+              _hover={{ bg: "white", color: "gray.700" }}
+              fontWeight="bold"
               w="120px"
             >
               RESUME

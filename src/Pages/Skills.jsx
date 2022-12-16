@@ -46,7 +46,7 @@ export default function Skills() {
     <Box pb={"30px"}>
       <Container maxW={"7xl"}>
         <Flex direction={"column"} align="center" gap="50px" justify={"center"}>
-          <Heading mt={"9vh"}>skills</Heading>
+          <Heading mt={"9vh"}>SKILLS</Heading>
           <Grid
             gridTemplateColumns={{
               base: "repeat(2,1fr)",

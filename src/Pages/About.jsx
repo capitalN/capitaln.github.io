@@ -54,14 +54,12 @@ export default function About() {
               />
               <Divider />
               <Box fontFamily={"mono"}>
-                <Text fontWeight={"bold"} fontSize="2xl">
-                  NIKHIL ANGOLKAR
-                </Text>
-                <Text fontWeight={"bold"}>full-stack web-developer</Text>
+                <Text fontWeight={"bold"}>NIKHIL ANGOLKAR</Text>
+                <Text>full-stack web-developer</Text>
               </Box>
             </VStack>
             <VStack justifyContent={"center"} gap="15px">
-              <Heading>about me</Heading>
+              <Heading>ABOUT</Heading>
 
               <Text fontWeight={"bold"} fontSize="md" w={{ lg: "80%" }}>
                 " An ambitious and self-motivated full-stack web developer with

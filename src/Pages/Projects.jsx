@@ -70,14 +70,13 @@ export default function Projects() {
       <Container maxW={"7xl"}>
         <Flex direction={"column"} align="center" justify={"center"}>
           <Flex gap="60px" direction="column">
-            <Heading mt={"9vh"}>projects</Heading>
+            <Heading mt={"9vh"}>PROJECTS</Heading>
             {PROJECTS.map((project) => (
               <Flex
                 key={project.title}
                 direction={{ base: "column", lg: project.direction }}
                 gap="20px"
                 borderRadius={"40px"}
-  
               >
                 <Image
                   w={{ base: "100%", lg: "60%" }}
@@ -85,6 +84,7 @@ export default function Projects() {
                   alt="fdf"
                   borderRadius={"20px"}
                   boxShadow="2xl"
+                  data-aos="fade-down"
                 />
 
                 <VStack
@@ -93,7 +93,7 @@ export default function Projects() {
                   p="20px"
                 >
                   <Stack>
-                    <Heading size={"md"}>{project.title}</Heading>
+                    <Heading size={"lg"}>{project.title}</Heading>
                     <Text>{project.desc}</Text>
                   </Stack>
                   <Stack>
