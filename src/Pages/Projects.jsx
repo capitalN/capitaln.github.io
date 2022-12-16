@@ -115,7 +115,7 @@ export default function Projects() {
                     </HStack>
                   </Stack>
                   <Divider />
-                  <HStack color={"gray.700"}>
+                  <HStack color={"black"}>
                     <Link
                       href={project.link}
                       target="_blank"
@@ -144,9 +144,9 @@ export default function Projects() {
                         borderRadius={"full"}
                         fontWeight="bold"
                         w="120px"
-                        bg={"gray.700"}
+                        bg={"black"}
                         color="white"
-                        _hover={{ color: "gray.700", bg: "gray.200" }}
+                        _hover={{ color: "black", bg: "gray.200" }}
                         gap="1"
                       >
                         GITHUB
@@ -175,7 +175,7 @@ export default function Projects() {
     borderRadius={"full"}
     bg={"orange"}
     color="white"
-    _hover={{ bg: "gray.700" }}
+    _hover={{ bg: "black" }}
     fontWeight="bold"
   >
     RESUME

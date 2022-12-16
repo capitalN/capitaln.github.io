@@ -81,7 +81,7 @@ function App() {
           w="100vw"
           h={"60px"}
           align={"center"}
-          bg={"gray.700"}
+          bg={"black"}
           color="white"
           zIndex={10}
           id="navbar"
@@ -113,7 +113,7 @@ function App() {
               borderRadius={"full"}
               bg={"orange"}
               color="white"
-              _hover={{ bg: "white", color: "gray.700" }}
+              _hover={{ bg: "white", color: "black" }}
               fontWeight="bold"
               w="120px"
             >
@@ -147,7 +147,7 @@ function App() {
             finalFocusRef={btnRef}
           >
             <DrawerOverlay />
-            <DrawerContent bg={"gray.700"} color="white">
+            <DrawerContent bg={"black"} color="white">
               <DrawerCloseButton />
               <Heading fontFamily={"mono"}>NIKHIL</Heading>
               <Divider />
@@ -171,8 +171,8 @@ function App() {
         </HStack>
       </Show>
 
-      <Box color="gray.700">
-        <Box id="home" bg="gray.700" color={"white"}>
+      <Box color="black">
+        <Box id="home" bg="black" color={"white"}>
           <Home />
         </Box>
         <Box id="about">
@@ -192,7 +192,7 @@ function App() {
       <Box
         w="100vw"
         justify="space-evenly"
-        bg={"gray.700"}
+        bg={"black"}
         color="white"
         padding={"20px"}
       >

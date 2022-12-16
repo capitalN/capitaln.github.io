@@ -31,7 +31,7 @@ import {
 export default function Skills() {
   let skillsBadge = {
     displlay: "flex",
-    background: "#2d3748",
+    background: "black",
     color: "white",
     padding: "10px",
     borderRadius: "10px",

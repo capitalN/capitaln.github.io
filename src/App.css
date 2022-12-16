@@ -1,7 +1,7 @@
 /* selection color */
 ::selection {
     color: white;
-    background: #2d3748;
+    background: black;
   }
 
 /* hiding scroll-bar */

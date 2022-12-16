@@ -38,7 +38,7 @@ export default function Contact() {
             p="30px"
             gap={"20px"}
             align="top"
-            bg={"gray.700"}
+            bg={"black"}
             borderRadius={"10px"}
             boxShadow={"2xl"}
             direction={{
@@ -125,7 +125,7 @@ export default function Contact() {
                     borderRadius={"full"}
                     bg={"orange"}
                     color="white"
-                    _hover={{ bg: "gray.700" }}
+                    _hover={{ bg: "black" }}
                     fontWeight="bold"
                     w="120px"
                   >

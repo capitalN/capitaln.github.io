@@ -43,18 +43,18 @@ export default function About() {
               p={"30px"}
               borderRadius={"10px"}
               justify={"space-evenly"}
-              bg="gray.700"
+              bg="black"
               color={"white"}
             >
               <Image
                 src="https://avatars.githubusercontent.com/u/107465553?v=4"
                 alt="nikhil angolkar"
-                borderRadius={"10px"}
+                borderRadius={"full"}
                 mb="20px"
               />
               <Divider />
               <Box fontFamily={"mono"}>
-                <Text fontWeight={"bold"}>NIKHIL ANGOLKAR</Text>
+                <Text fontSize={"26px"}>NIKHIL ANGOLKAR</Text>
                 <Text>full-stack web-developer</Text>
               </Box>
             </VStack>
@@ -77,7 +77,7 @@ export default function About() {
                   borderRadius={"full"}
                   bg={"orange"}
                   color="white"
-                  _hover={{ bg: "gray.700" }}
+                  _hover={{ bg: "black" }}
                   fontWeight="bold"
                   w="120px"
                 >

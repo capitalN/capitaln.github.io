@@ -38,7 +38,7 @@ export default function Home() {
               borderRadius={"full"}
               bg={"orange"}
               color="white"
-              _hover={{ bg: "white", color: "gray.700" }}
+              _hover={{ bg: "white", color: "black" }}
               fontWeight="bold"
               w="120px"
             >
