@@ -171,7 +171,7 @@ function App() {
         </HStack>
       </Show>
 
-      <Box>
+      <Box color="gray.700">
         <Box id="home" bg="gray.700" color={"white"}>
           <Home />
         </Box>
@@ -197,7 +197,9 @@ function App() {
         padding={"20px"}
       >
         <Heading>nikhil angolkar</Heading>
-        <Link>angolkarnikhil@gmail.com</Link>
+        <Link href="mailto:angolkarnikhil@gmail.com">
+          angolkarnikhil@gmail.com
+        </Link>
       </Box>
     </Box>
   );

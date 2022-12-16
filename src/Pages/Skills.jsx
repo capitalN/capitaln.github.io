@@ -108,7 +108,7 @@ export default function Skills() {
             <GitHubCalendar username="capitalN" />
             <Divider />
             <Text fontWeight={"bold"} mt="-40px">
-              github calender / capitalN
+              GITHUB CALENDER
             </Text>
           </VStack>
         </Flex>

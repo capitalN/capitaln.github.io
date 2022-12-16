@@ -12,9 +12,11 @@ import {
   VStack,
   Textarea,
   Divider,
+  FormControl,
 } from "@chakra-ui/react";
 
-import { SiGithub, SiLinkedin, SiGmail, SiMinutemailer } from "react-icons/si";
+import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
+import { RiSendPlane2Fill } from "react-icons/ri";
 
 export default function Contact() {
   return (
@@ -82,33 +84,56 @@ export default function Contact() {
               </HStack>
             </VStack>
 
-            <VStack
-              background="white"
-              p={"20px"}
-              boxShadow="2xl"
-              borderRadius={"10px"}
+            <form
+              action="https://formsubmit.co/angolkarnikhil@gmail.com"
+              method="POST"
             >
-              <Text fontWeight={"bold"} m="10px 20px">
-                fill up the form to contact
-              </Text>
-              <Input type={"text"} placeholder="your name" textAlign={"left"} />
-              <Input
-                type={"email"}
-                placeholder="your email"
-                textAlign={"left"}
-              />
-              <Textarea placeholder="type here..." textAlign={"left"} />
-              <Button
-                borderRadius={"full"}
-                bg={"orange"}
-                color="white"
-                _hover={{ bg: "gray.700" }}
-                fontWeight="bold"
-                w="120px"
+              <VStack
+                background="white"
+                p={"20px"}
+                boxShadow="2xl"
+                borderRadius={"10px"}
               >
-                SEND
-              </Button>
-            </VStack>
+                <Text fontWeight={"bold"} m="10px 20px">
+                  fill up the form to contact
+                </Text>
+                <Input
+                  type={"text"}
+                  placeholder="your name"
+                  textAlign={"left"}
+                  required
+                  name="name"
+                  class="form-control"
+                />
+                <Input
+                  type={"email"}
+                  placeholder="your email"
+                  textAlign={"left"}
+                  required
+                  name="email"
+                  class="form-control"
+                />
+                <Textarea
+                  placeholder="type here..."
+                  textAlign={"left"}
+                  required
+                  name="message"
+                  class="form-control"
+                />
+                <button type="submit" class="btn btn-lg btn-dark btn-block">
+                  <Button
+                    borderRadius={"full"}
+                    bg={"orange"}
+                    color="white"
+                    _hover={{ bg: "gray.700" }}
+                    fontWeight="bold"
+                    w="120px"
+                  >
+                    SEND
+                  </Button>
+                </button>
+              </VStack>
+            </form>
           </Flex>
         </Flex>
       </Container>

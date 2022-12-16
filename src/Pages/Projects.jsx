@@ -123,8 +123,13 @@ export default function Projects() {
                         textDecoration: "none",
                       }}
                     >
-                      <Button borderRadius={"full"} fontWeight="bold" w="120px">
-                        Live.
+                      <Button
+                        borderRadius={"full"}
+                        fontWeight="bold"
+                        w="120px"
+                        gap="1"
+                      >
+                        LIVE
                         <SiNetlify />
                       </Button>
                     </Link>
@@ -142,8 +147,9 @@ export default function Projects() {
                         bg={"gray.700"}
                         color="white"
                         _hover={{ color: "gray.700", bg: "gray.200" }}
+                        gap="1"
                       >
-                        GitHub.
+                        GITHUB
                         <SiGithub />
                       </Button>
                     </Link>
