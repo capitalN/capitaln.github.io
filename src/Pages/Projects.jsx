@@ -25,7 +25,7 @@ const PROJECTS = [
     link: "https://dulcet-marigold-6dca17.netlify.app/",
     image: "lately.png",
     github: "https://github.com/capitalN/lately.ai",
-    desc: "this is an ai based content creating website buitd by me and my team of 4 during our construct week, and my contributions are ",
+    desc: "this is an ai based content creating website buitd by me and my team of 4 during our construct week within a time span of 4-days",
     direction: "row",
     contributions: ["navbar", "footer", "resource pages", "UI"],
     techStack: [
@@ -53,7 +53,7 @@ const PROJECTS = [
     link: "https://app.netlify.com/sites/tubular-pudding-02ae88/overview",
     image: "lately.png",
     image: "youtube.png",
-    desc: "video creating and sharing website",
+    desc: "youtube is video creating and sharing website, i have used youtube api to fetch data, user can be able search video and watch them",
     direction: "row",
     contributions: ["navbar", "footer", "resource pages", "UI"],
     techStack: [
@@ -94,7 +94,7 @@ export default function Projects() {
                 >
                   <Stack>
                     <Heading size={"lg"}>{project.title}</Heading>
-                    <Text>{project.desc}</Text>
+                    <Text textAlign={"justify"}>{project.desc}</Text>
                   </Stack>
                   <Stack>
                     <Text fontWeight={"bold"}>contributions</Text>
@@ -117,7 +117,7 @@ export default function Projects() {
                   <Divider />
                   <HStack color={"black"}>
                     <Link
-                      href={project.link}
+                      href={project.github}
                       target="_blank"
                       _hover={{
                         textDecoration: "none",
@@ -129,12 +129,12 @@ export default function Projects() {
                         w="120px"
                         gap="1"
                       >
-                        LIVE
-                        <SiNetlify />
+                        GITHUB
+                        <SiGithub />
                       </Button>
                     </Link>
                     <Link
-                      href={project.github}
+                      href={project.link}
                       target="_blank"
                       _hover={{
                         textDecoration: "none",
@@ -149,8 +149,8 @@ export default function Projects() {
                         _hover={{ color: "black", bg: "gray.200" }}
                         gap="1"
                       >
-                        GITHUB
-                        <SiGithub />
+                        LIVE
+                        <SiNetlify />
                       </Button>
                     </Link>
                   </HStack>

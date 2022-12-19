@@ -105,10 +105,20 @@ export default function Skills() {
             }}
             boxShadow="2xl"
           >
+            <Flex gap={"10px"}>
+              <Image
+                src="https://github-readme-stats.vercel.app/api/top-langs?username=capitalN&show_icons=true&locale=en&layout=compact"
+                w={"50%"}
+              />
+              <Image
+                src="https://github-readme-stats.vercel.app/api?username=capitalN&show_icons=true&locale=en"
+                w={"50%"}
+              />
+            </Flex>
             <GitHubCalendar username="capitalN" />
             <Divider />
             <Text fontWeight={"bold"} mt="-40px">
-              GITHUB CALENDER
+              GITHUB STATS
             </Text>
           </VStack>
         </Flex>
