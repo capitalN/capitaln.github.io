@@ -104,6 +104,7 @@ export default function Skills() {
               borderRadius: "10px",
             }}
             boxShadow="2xl"
+            gap={"10px"}
           >
             <Flex gap={"10px"}>
               <Image
@@ -116,10 +117,6 @@ export default function Skills() {
               />
             </Flex>
             <GitHubCalendar username="capitalN" />
-            <Divider />
-            <Text fontWeight={"bold"} mt="-40px">
-              GITHUB STATS
-            </Text>
           </VStack>
         </Flex>
       </Container>
